@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.logo {
+    width: 360px;
+    height: 100px;
+    /*padding: 25px 0 20px 0;*/
+    line-height: 100px;
+    float: left;
+}
+.logo-a {
+    width: 170px;
+    height: 100px;
+    overflow: hidden;
+    float: left;
+    background: url(../images/logo.png) no-repeat;
+    background-position-y: 25px;
+    text-indent: -100em;
+
+}
+.dong {
+    float: left;
+}
+.search {
+    width: 540px;
+    height: 100px;
+    background-color: pink;
+    float: left;
+}
