@@ -20,8 +20,74 @@
     float: left;
 }
 .search {
-    width: 540px;
-    height: 100px;
+    width: 538px;
+    height: 36px;
     background-color: pink;
     float: left;
+    margin-top: 25px;
+}
+
+.search input {
+    width: 450px;
+    height: 32px;
+    border: 2px solid #B61D1D;
+    padding-left: 4px;
+    float: left;
+    font: 14px/28px "Microsoft YaHei UI";
+    color: #666666;
+}
+
+.search button {
+    width: 80px;
+    height: 36px;
+    font: 16px/32px "Microsoft YaHei UI";
+    /*font-size: 16px;*/
+    color: #ffffff;
+    background-color:#B61D1D;
+    float: left;
+}
+
+.shopcar {
+    width: 139px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid grey;
+    float: right;
+    margin-top: 25px;
+    margin-right: 134px;
+    position: relative;
+    background-color: #fffd6c;
+}
+.shopcar a {
+    position: absolute;
+    left: 43px;
+    height: 34px;
+    font: normal 13px/34px SimSun;
+    color: #666666;
+}
+.shopcar .car-icon {
+    width: 18px;
+    height: 16px;
+    background: url(../images/sprite.png) ;
+    background-position-y: -60px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+}
+
+.shopcar .icon2 {
+    font: 400 13px/13px SimSun;
+    position: absolute;
+    /*top: 10px;*/
+    right: 11px;
+    top: 11px;
+}
+
+.shopcar .icon3 {
+    position: absolute;
+    right: 20px;
+    top: -3px;
+    background-color: #C81623;
+    
 }
