@@ -298,6 +298,27 @@ s,i,em{font-style:normal;text-decoration:none;}
 
 }
 
+.dropdown .itmes {
+    height: 31px;
+    line-height: 31px;
+    border-left: 1px solid #B61D1D;
+    padding-left: 10px;
+    padding-right: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-family:"Microsoft YaHei UI";
+}
+.dropdown .itmes h3 {
+    float: left;
+}
+
+.dropdown .itmes span {
+    float: right;
+    font-family: "宋体";
+    font-weight: 600;
+
+
+}
 /*底部  开始*/
 .slogen {
     height: 54px;
