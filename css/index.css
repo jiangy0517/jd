@@ -19,18 +19,12 @@
 .main .slider {
     width: 730px;
     height: 453px;
-    background-color: pink;
+    background-color: #cccece;
     margin: 12px 0 0  220px;
     float: left;
+    position: relative;
 }
 
-.main .news {
-    width: 248px;
-    height: 451px;
-    border: 1px solid #E4E4E4;
-    float: right;
-    margin-top: 12px;
-}
 
 .slider .circle {
     position: absolute;
@@ -53,6 +47,90 @@
     cursor: pointer;
 }
 
+.arr_left,.arr_right {
+    position: absolute;
+    width: 28px;
+    height: 62px;
+    top: 50%;
+    margin-top: -31px;
+    background: rgba(0,0,0,0.2);
+    font: 500 20px/62px "宋体";
+    color: #ffffff;
+    text-align: center;
+}
+
+.arr_left:hover,.arr_right:hover {
+    background: rgba(0,0,0,.4);
+    color: #fff;
+}
+
+.arr_left {
+    left: 0;
+}
+.arr_right{
+    right: 0;
+}
+
 .circle .current {
     background-color:#B61B1F;
 }
+.main .news {
+    width: 248px;
+    height: 451px;
+    border: 1px solid #E4E4E4;
+    float: right;
+    margin-top: 12px;
+}
+
+.news .jd-news {
+    height: 200px;
+    border-bottom: 1px dashed #E8E8E7;
+
+}
+.jd-news .dt , .jd_liftservice .dt {
+    height: 43px;
+    border-bottom: 1px dotted #E8E8E7;
+
+}
+
+.jd-news h3 ,.jd_liftservice h3 {
+    font: 14px/43px "Microsoft YaHei UI";
+    float: left;
+    margin-left: 15px;
+}
+
+.jd-news .dt a {
+    font: 12px/43px "宋体";
+    float: right;
+    margin-right: 15px;
+}
+
+.jd-news .dd ul {
+    padding: 8px 0 0 15px;
+}
+
+.jd-news .dd li {
+    line-height: 28px;
+}
+
+.jd-news .dd span {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.jd_liftservice {
+    height: 250px;
+}
+
+.jd_liftservice .dd li {
+    width: 62px;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    float: left;
+    margin-left: -1px;
+}
+
+
+
+
+
