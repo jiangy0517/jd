@@ -80,6 +80,7 @@
     border: 1px solid #E4E4E4;
     float: right;
     margin-top: 12px;
+    overflow: hidden;
 }
 
 .news .jd-news {
@@ -119,17 +120,63 @@
 }
 
 .jd_liftservice {
+    width: 252px;
     height: 250px;
+
 }
 
 .jd_liftservice .dd li {
     width: 62px;
-    height: 70px;
+    height: 68px;
     border: 1px solid #E4E4E4;
     float: left;
     margin-left: -1px;
+    margin-top: -1px;
+    position: relative;
 }
 
+.jd_liftservice li a {
+    display: block;
+    text-align: center;
+    padding-top: 46px;
+
+}
+
+.jd_liftservice li i {
+    position: absolute;
+    top: 12px;
+    left: 21px;
+    width: 23px;
+    height: 25px;
+    background: url("../images/icon_lifeserv.png") no-repeat right top;
+
+}
+
+.lifeservice-icon2 a i {
+    background-position: right -50px;
+}
+
+.jd_liftservice .song {
+    background: url("../images/song.png") no-repeat right top;
+}
+
+.jd_liftservice .mian {
+    background: url("../images/mian.png") no-repeat right top;
+}
+
+.todays {
+    position: relative;
+}
+.night {
+    margin: 10px 0 28px 0;
+}
+.night-r {
+    width: 400%;
+}
+.night-r li {
+    float: left;
+    margin-right: 1px;
+}
 
 
 
