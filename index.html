@@ -10,6 +10,115 @@
 
 </head>
 <body>
+<script>
+
+    window.onload = function () {
+
+        closeBanner();
+        looper();
+        login();
+
+    };
+
+    function closeBanner() {
+        var topBannerClose = document.getElementById("top_banner_close");
+        var topBanner = document.getElementById("top_banner");
+
+        topBannerClose.onclick = function () {
+            topBanner.style.display = "none";
+            console.log("none");
+        };
+        //http://222.223.162.172:9088/newggfw/ggfw/payproxy/api/lhry/v1/person?whichidcard=130702199003074015
+        //http://172.30.3.62:9080/                 payproxy/api/lhry/v1/person?whichidcard=130705199010130627
+    }
+
+    function looper() {
+        var arr = document.getElementById("arri");   //两个 三角
+        var slide = document.getElementById("slide");  // 轮播图的盒子
+        slide.onmouseover = function(){
+            arr.style.display = "block";  // 显示三角
+        };
+        slide.onmouseout = function () {
+            arr.style.display = "none";
+        };
+
+        var dot1 = document.getElementById("dot1");
+        var dot2 = document.getElementById("dot2");
+        var dot3 = document.getElementById("dot3");
+        var dot4 = document.getElementById("dot4");
+        var dot5 = document.getElementById("dot5");
+        var dot6 = document.getElementById("dot6");
+        var slider_image = document.getElementById("slider_image");
+
+        var preDotPosition = 1;
+        var dots = {dot1,dot2,dot3,dot4,dot5,dot6};
+        console.log("==========");
+
+        dot1.onmouseover = function () {
+            slider_image.src = "images/11.jpg";
+            dot1.className = "current";
+            console.log("preDotPosition:"+preDotPosition)
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 1;
+        }
+        dot2.onmouseover = function () {
+            slider_image.src = "images/22.jpg";
+            dot2.className = "current";
+            console.log("preDotPosition:"+preDotPosition)
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 2;
+        }
+        dot3.onmouseover = function () {
+            slider_image.src = "images/33.jpg";
+            dot3.className = "current";
+            console.log("preDotPosition:"+preDotPosition)
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 3;
+        }
+        dot4.onmouseover = function () {
+            slider_image.src = "images/44.jpg";
+            dot4.className = "current";
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 4;
+        }
+        dot5.onmouseover = function () {
+            slider_image.src = "images/55.jpg";
+            dot5.className = "current";
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 5;
+        }
+        dot6.onmouseover = function () {
+            slider_image.src = "images/66.jpg";
+            dot6.className = "current";
+            // dots[preDotPosition].className = "other";
+            preDotPosition = 6;
+        }
+    }
+
+    function login() {
+        let login_btn = document.getElementById("login-btn");
+        let mark = document.getElementById("mark");
+        let box_login = document.getElementById("box-login");
+        let close_login = document.getElementById("close-login");
+
+        login_btn.onclick = function () {
+            mark.style.display = "block";
+            box_login.style.display = "block";
+        }
+        close_login.onclick = function () {
+            mark.style.display = "none";
+            box_login.style.display = "none";
+        }
+
+    }
+
+</script>
+
+<div id="mark"></div>
+<div id="box-login">
+    <span id="close-login">×</span>
+</div>
+
 <!--头部导航栏-->
 <div class="shortcut">
     <div class="w">
@@ -22,7 +131,7 @@
         <div class="fr">
             <ul>
                 <li>
-                    <a href="#">你好，请登录</a>&nbsp;&nbsp;
+                    <a href="javascript:;" id="login-btn">你好，请登录</a>&nbsp;&nbsp;
                     <a href="#" class="col-red">免费注册</a>
                 </li>
                 <li class="line"></li>
@@ -59,12 +168,13 @@
 </div>
 
 <!--头部banner-->
-<div class="topbanner-bg">
+<div class="topbanner-bg" id="top_banner">
     <div class="topbanner w">
         <img src="images/topbanner.jpg" alt="">
-        <a href="javascript:;" class="close-banner"></a>
+        <a href="javascript:;" class="close-banner" id="top_banner_close"></a>
     </div>
 </div>
+
 <!--log，搜索框，购物车-->
 <div class="w clearfix">
     <div class="logo">
@@ -188,21 +298,22 @@
 </div>
 
 <div class="w main clearfix">
-    <div class="slider">
-        <!--  <a href="#"><img src="images/slider1.jpg" alt=""></a>-->
+    <div class="slider" id="slide">
+        <a href="#" ><img id="slider_image" src="images/11.jpg" alt="" ></a>
         <ul class="circle">
-            <li class="current">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+            <li class="current" id="dot1">1</li>
+            <li id="dot2">2</li>
+            <li id="dot3">3</li>
+            <li id="dot4">4</li>
+            <li id="dot5">5</li>
+            <li id="dot6">6</li>
         </ul>
-        <div class="arr">
-            <a href="javascript:;" class="arr_left"><</a>
-            <a href="javascript:;" class="arr_right">></a>
+        <div class="arr" id="arri">
+            <a href="javascript:;" class="arr_left" id="slider_arr_left"><</a>
+            <a href="javascript:;" class="arr_right" id="slider_arr_right">></a>
         </div>
     </div>
+
     <div class="news">
         <div class="jd-news">
             <div class="dt">
@@ -419,5 +530,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

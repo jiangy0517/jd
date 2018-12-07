@@ -46,6 +46,9 @@
     text-align: center;
     cursor: pointer;
 }
+.arr {
+    display: none;
+}
 
 .arr_left,.arr_right {
     position: absolute;
